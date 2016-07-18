@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c05babcca4513686ca7b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "df325806f2e74467a410"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8213,7 +8213,37 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(KDayList).call(this, props));
 
 	    _this.state = {
-	      kdays: []
+	      kdays: [{
+	        message: 'Example message',
+	        date: '30/03/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '01/04/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '02/04/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '03/04/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '04/04/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '05/04/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '06/04/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '07/04/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '08/04/2016'
+	      }, {
+	        message: 'Example message',
+	        date: '09/04/2016'
+	      }]
 	    };
 	    return _this;
 	  }
@@ -8223,10 +8253,22 @@
 	    value: function render() {
 	      var kdays = this.state.kdays.map(function (kday) {
 	        return _react2.default.createElement(
-	          'p',
-	          { key: kday },
-	          ' ',
-	          kday.message
+	          'span',
+	          { key: kday.date },
+	          _react2.default.createElement(
+	            'p',
+	            { style: { position: 'relative', float: 'left' } },
+	            ' ',
+	            kday.message,
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            { style: { position: 'relative', float: 'left' } },
+	            ' ',
+	            kday.date,
+	            ' '
+	          )
 	        );
 	      });
 	      return _react2.default.createElement(
